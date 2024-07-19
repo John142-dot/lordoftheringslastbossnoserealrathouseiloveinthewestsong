@@ -1,0 +1,293 @@
+print("Yee yee haircut detected, go get a fucking shower nigger!")
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TopBar = Instance.new("Frame")
+local UICorner2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local CloseButton = Instance.new("TextButton")
+local UICorner3 = Instance.new("UICorner")
+
+local ExecutorTab = Instance.new("Frame")
+local ExecutorButton = Instance.new("TextButton")
+local UICorner4 = Instance.new("UICorner")
+local ExecuteButton = Instance.new("TextButton")
+local ClearButton = Instance.new("TextButton")
+local UICorner5 = Instance.new("UICorner")
+local ScriptBox = Instance.new("TextBox")
+local UICorner6 = Instance.new("UICorner")
+
+local ScriptsTab = Instance.new("Frame")
+local LalolHubButton = Instance.new("TextButton")
+local InfiniteYieldButton = Instance.new("TextButton")
+local ScriptSearcherButton = Instance.new("TextButton")
+local ScriptsTabButton = Instance.new("TextButton")
+local UICorner7 = Instance.new("UICorner")
+local UICorner8 = Instance.new("UICorner")
+local UICorner9 = Instance.new("UICorner")
+local UICorner10 = Instance.new("UICorner")
+local UICorner11 = Instance.new("UICorner")
+local UICorner12 = Instance.new("UICorner")
+local UICorner13 = Instance.new("UICorner")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Name = "ExtraHubUI"
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.Position = UDim2.new(0.5, -200, 0.5, -150)
+MainFrame.Size = UDim2.new(0, 400, 0, 300)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = MainFrame
+
+TopBar.Name = "TopBar"
+TopBar.Parent = MainFrame
+TopBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TopBar.Size = UDim2.new(1, 0, 0, 30)
+
+UICorner2.CornerRadius = UDim.new(0, 10)
+UICorner2.Parent = TopBar
+
+Title.Name = "Title"
+Title.Parent = TopBar
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1
+Title.Size = UDim2.new(1, -30, 1, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Extra Hub"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 24
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Position = UDim2.new(0, 10, 0, 0)
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = TopBar
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+CloseButton.Position = UDim2.new(1, -30, 0, 5)
+CloseButton.Size = UDim2.new(0, 20, 0, 20)
+CloseButton.Font = Enum.Font.SourceSans
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 14
+
+UICorner3.CornerRadius = UDim.new(0, 5)
+UICorner3.Parent = CloseButton
+
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Executor Tab
+ExecutorTab.Name = "ExecutorTab"
+ExecutorTab.Parent = MainFrame
+ExecutorTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExecutorTab.Position = UDim2.new(0, 10, 0, 40)
+ExecutorTab.Size = UDim2.new(1, -20, 1, -50)
+ExecutorTab.Visible = true
+
+UICorner4.CornerRadius = UDim.new(0, 10)
+UICorner4.Parent = ExecutorTab
+
+ExecutorButton.Name = "ExecutorButton"
+ExecutorButton.Parent = MainFrame
+ExecutorButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExecutorButton.Position = UDim2.new(0, 10, 0, 40)
+ExecutorButton.Size = UDim2.new(0, 100, 0, 30)
+ExecutorButton.Font = Enum.Font.SourceSans
+ExecutorButton.Text = "Executor"
+ExecutorButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecutorButton.TextSize = 18
+
+UICorner5.CornerRadius = UDim.new(0, 10)
+UICorner5.Parent = ExecutorButton
+
+ExecutorButton.MouseButton1Click:Connect(function()
+    ExecutorTab.Visible = true
+    ScriptsTab.Visible = false
+    ExecutorButton.Visible = false
+    ScriptsTabButton.Visible = true
+end)
+
+-- Script input box
+ScriptBox.Name = "ScriptBox"
+ScriptBox.Parent = ExecutorTab
+ScriptBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ScriptBox.Position = UDim2.new(0, 10, 0, 10)
+ScriptBox.Size = UDim2.new(1, -20, 0.6, -20)
+ScriptBox.Font = Enum.Font.SourceSans
+ScriptBox.MultiLine = true
+ScriptBox.Text = ""
+ScriptBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptBox.TextSize = 14
+ScriptBox.TextWrapped = true
+
+UICorner6.CornerRadius = UDim.new(0, 10)
+UICorner6.Parent = ScriptBox
+
+-- Execute button
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = ExecutorTab
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ExecuteButton.Position = UDim2.new(0.3, 0, 0.75, 0)
+ExecuteButton.Size = UDim2.new(0.4, 0, 0.15, 0)
+ExecuteButton.Font = Enum.Font.SourceSans
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 18
+
+UICorner7.CornerRadius = UDim.new(0, 10)
+UICorner7.Parent = ExecuteButton
+
+ExecuteButton.MouseButton1Click:Connect(function()
+    local scriptText = ScriptBox.Text
+    local func = loadstring(scriptText)
+    if func then
+        func()
+    else
+        print("Failed to load script.")
+    end
+end)
+
+-- Clear button
+ClearButton.Name = "ClearButton"
+ClearButton.Parent = ExecutorTab
+ClearButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ClearButton.Position = UDim2.new(0.3, 0, 0.9, 0)
+ClearButton.Size = UDim2.new(0.4, 0, 0.1, 0)
+ClearButton.Font = Enum.Font.SourceSans
+ClearButton.Text = "Clear"
+ClearButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearButton.TextSize = 18
+
+UICorner8.CornerRadius = UDim.new(0, 10)
+UICorner8.Parent = ClearButton
+
+ClearButton.MouseButton1Click:Connect(function()
+    ScriptBox.Text = ""
+end)
+
+-- Scripts Tab
+ScriptsTab.Name = "ScriptsTab"
+ScriptsTab.Parent = MainFrame
+ScriptsTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScriptsTab.Position = UDim2.new(0, 10, 0, 40)
+ScriptsTab.Size = UDim2.new(1, -20, 1, -50)
+ScriptsTab.Visible = false
+
+UICorner9.CornerRadius = UDim.new(0, 10)
+UICorner9.Parent = ScriptsTab
+
+ScriptsTabButton.Name = "ScriptsTabButton"
+ScriptsTabButton.Parent = MainFrame
+ScriptsTabButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScriptsTabButton.Position = UDim2.new(0, 120, 0, 40)
+ScriptsTabButton.Size = UDim2.new(0, 100, 0, 30)
+ScriptsTabButton.Font = Enum.Font.SourceSans
+ScriptsTabButton.Text = "Scripts"
+ScriptsTabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptsTabButton.TextSize = 18
+
+UICorner10.CornerRadius = UDim.new(0, 10)
+UICorner10.Parent = ScriptsTabButton
+
+ScriptsTabButton.MouseButton1Click:Connect(function()
+    ExecutorTab.Visible = false
+    ScriptsTab.Visible = true
+    ScriptsTabButton.Visible = false
+    ExecutorButton.Visible = true
+end)
+
+-- Lalol Hub Backdoor Scan button in Scripts Tab
+LalolHubButton.Name = "LalolHubButton"
+LalolHubButton.Parent = ScriptsTab
+LalolHubButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+LalolHubButton.Position = UDim2.new(0.1, 0, 0.1, 0)
+LalolHubButton.Size = UDim2.new(0.8, 0, 0.15, 0)
+LalolHubButton.Font = Enum.Font.SourceSans
+LalolHubButton.Text = "Lalol Hub Backdoor Scan"
+LalolHubButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LalolHubButton.TextSize = 18
+
+UICorner11.CornerRadius = UDim.new(0, 10)
+UICorner11.Parent = LalolHubButton
+
+LalolHubButton.MouseButton1Click:Connect(function()
+    local backdoorScript = [[
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script'))()
+    ]]
+    local func = loadstring(backdoorScript)
+    if func then
+        func()
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Script Error",
+            Text = "Failed to load backdoor scan script.",
+            Duration = 5
+        })
+    end
+end)
+
+-- Infinite Yield button in Scripts Tab
+InfiniteYieldButton.Name = "InfiniteYieldButton"
+InfiniteYieldButton.Parent = ScriptsTab
+InfiniteYieldButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+InfiniteYieldButton.Position = UDim2.new(0.1, 0, 0.25, 0)
+InfiniteYieldButton.Size = UDim2.new(0.8, 0, 0.15, 0)
+InfiniteYieldButton.Font = Enum.Font.SourceSans
+InfiniteYieldButton.Text = "Infinite Yield"
+InfiniteYieldButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYieldButton.TextSize = 18
+
+UICorner12.CornerRadius = UDim.new(0, 10)
+UICorner12.Parent = InfiniteYieldButton
+
+InfiniteYieldButton.MouseButton1Click:Connect(function()
+    local infiniteYieldScript = [[
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    ]]
+    local func = loadstring(infiniteYieldScript)
+    if func then
+        func()
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Script Error",
+            Text = "Failed to load Infinite Yield script.",
+            Duration = 5
+        })
+    end
+end)
+
+-- Script Searcher button in Scripts Tab
+ScriptSearcherButton.Name = "ScriptSearcherButton"
+ScriptSearcherButton.Parent = ScriptsTab
+ScriptSearcherButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ScriptSearcherButton.Position = UDim2.new(0.1, 0, 0.4, 0)
+ScriptSearcherButton.Size = UDim2.new(0.8, 0, 0.15, 0)
+ScriptSearcherButton.Font = Enum.Font.SourceSans
+ScriptSearcherButton.Text = "Script Searcher"
+ScriptSearcherButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptSearcherButton.TextSize = 18
+
+UICorner13.CornerRadius = UDim.new(0, 10)
+UICorner13.Parent = ScriptSearcherButton
+
+ScriptSearcherButton.MouseButton1Click:Connect(function()
+    local scriptSearcherScript = [[
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher'))()
+    ]]
+    local func = loadstring(scriptSearcherScript)
+    if func then
+        func()
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Script Error",
+            Text = "Failed to load Script Searcher script.",
+            Duration = 5
+        })
+    end
+end)
